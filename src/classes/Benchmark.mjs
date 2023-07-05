@@ -37,23 +37,23 @@ export default class Benchmark extends Emitter {
     let results = [];
 
     for (const [name, fncallback] of this.tests) {      
-      const startTime = process.hrtime.bigint();
+      const startTime = performance.now();
       for (let index = 0; index < iterations; index++) fncallback();
-      const endTime = process.hrtime.bigint();
+      const endTime = performance.now();
 
-      const time = Number(endTime - startTime) / 1e6;
+      const time = endTime - startTime;
       const ops = iterations / (time / 1000);
 
-      const performance = ((ops / iterations) * 100).toFixed(2);
+      const perform = ((ops / iterations) * 100).toFixed(2);
 
-      const data = { name, time, ops, performance };
+      const data = { name, time, ops, performance: perform };
 
       this.emit('cyclone', data);
 
       results.push(data);
     };
 
-    results = results.sort((a, b) => b.time - a.time);
+    results = results.sort((a, b) => a.time - b.time);
 
     this.emit('complete', results);
 

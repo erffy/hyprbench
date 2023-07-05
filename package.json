@@ -1,6 +1,6 @@
 {
   "name": "hyprbench",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Lightweight and Basic Benchmark module.",
   "main": "src/index.mjs",
   "types": "src/global.d.ts",
