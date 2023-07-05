@@ -1,9 +1,14 @@
 {
   "name": "hyprbench",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lightweight and Basic Benchmark module.",
   "main": "src/index.mjs",
   "types": "src/global.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erqeweew/hyprbench.git"
+  },
+  "homepage": "https://github.com/erqeweew/hyprbench",
   "exports": {
     ".": {
       "types": "./src/global.d.ts",
