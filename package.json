@@ -1,0 +1,36 @@
+{
+  "name": "hyprbench",
+  "version": "1.0.0",
+  "description": "Lightweight and Basic Benchmark module.",
+  "main": "src/index.mjs",
+  "types": "src/global.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/global.d.ts",
+      "require": "./src/index.js",
+      "import": "./src/index.mjs"
+    },
+    "./cjs": "./src/index.js",
+    "./esm": "./src/index.mjs",
+    "./cjs/benchmark": "./src/classes/Benchmark.js",
+    "./esm/benchmark": "./src/classes/Benchmark.mjs"
+  },
+  "scripts": {
+    "start": "clear && node src/index",
+    "start:esm": "clear && node src/index.mjs"
+  },
+  "keywords": [
+    "benchmark",
+    "hypr",
+    "mark"
+  ],
+  "author": "erqewee",
+  "license": "MIT",
+  "dependencies": {
+    "@smootie/emitter": "^1.6.4"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}
