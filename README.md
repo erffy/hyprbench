@@ -1,3 +1,5 @@
+# No Longer Maintained.
+
 # Hyprbench
 
 - Lightweight and basic benchmark module.
